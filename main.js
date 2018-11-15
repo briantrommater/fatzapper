@@ -1,22 +1,31 @@
-let score = 0;
+let score = 0,
+p100 = document.getElementById('p100'),
+p50 = document.getElementById('p50'),
+m100 = document.getElementById('m100'),
+m50 = document.getElementById('m50'),
+cals = document.getElementById('cals');
 
-$('#p100').click(function() {
+
+p100.addEventListener('click', () => {
     score += 100;
-    $('#score').html(score);
+    cals.innerHTML = score;
 });
 
-$('#p50').click(function() {
+p50.addEventListener('click', () => {
     score += 50;
-    $('#score').html(score);
+    cals.innerHTML = score;
 });
 
-$('#m100').click(function() {
+m100.addEventListener('click', () => {
     score -= 100;
-    $('#score').html(score);
+    cals.innerHTML = score;
 });
 
-$('#m50').click(function() {
+m50.addEventListener('click', () => {
     score -= 50;
-    $('#score').html(score);
+    cals.innerHTML = score;
 });
+
+
+
 

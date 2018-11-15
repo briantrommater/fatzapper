@@ -6,10 +6,6 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(180, 100%, 50%));
 }
 
-/* .container {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(180, 100%, 50%));
-} */
-
 .button {
     display: inline-block;
     font-size: 4em;
@@ -17,6 +13,7 @@ body {
     padding: 30px;
     width: 20%;
     border: 3px outset black;
+    box-shadow: 0 0 30px maroon;
     border-radius: 15px;
 }
 
