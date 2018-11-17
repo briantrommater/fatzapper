@@ -15,6 +15,7 @@ body {
     border: 3px outset black;
     box-shadow: 0 0 30px maroon;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #p100 {
@@ -39,4 +40,8 @@ body {
 
 #hi {
     font-size: 6em;
+}
+
+#sumo {
+    display: none;
 }
