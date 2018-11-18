@@ -1,6 +1,6 @@
 const getsavedScore = () => {
     let savedScore = localStorage.getItem("score")
-   savedScore = parseInt(savedScore)
+    savedScore = parseInt(savedScore)
     return savedScore ? savedScore:  0
 }
 
@@ -45,31 +45,23 @@ m50.addEventListener('click', () => {
 });
 
 
-// const show = () => {
-//     if (cals > 300) {
-//         let obese = document.getElementById("sumo");
-//                 for (let stuff of obese) {
-//                     stuff.style.display = "block";
-//                 }
-//     }
-// }
+const show = () => {
+    if (cals.textContent > 1500) {
+        let obese = document.getElementById("door");
+            obese.style.display = "block";
+    }
+    else if (cals.textContent > 1000) {
+        let obese = document.getElementById("slam");
+            obese.style.display = "block";
+    }
+    else if (cals.textContent > 500) {
+        let obese = document.getElementById("sumo");
+            obese.style.display = "block";
+    }
+    else {
+        let crazy = document.getElementById("duck")
+            crazy.style.display = "block"
+    }
+}
+show();
 
-// const show = () => {
-//     if (score > 300) {
-//         let obese = document.getElementById("sumo");
-             
-//         obese.style.display = "block";
-                
-//     }
-// }
-
-// show();
-
-// function show() {
-//     if (score > 300) {
-//         let obese = document.getElementById("sumo");
-//         obese.style.display = "block";
-//     }
-// }
-
-// show()
