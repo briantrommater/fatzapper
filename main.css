@@ -54,3 +54,37 @@ body {
 #slam {
     display: none;
 }
+#girl {
+    display: none;
+}
+#man {
+    display: none;
+}
+#breast {
+    display: none;
+}
+
+@media all and (max-width: 756px) {
+    .button {
+        display: inline-block;
+        font-size: 2em;
+        margin: 0.1em;
+        padding: 3px;
+        width: 33%;
+        border: 3px outset black;
+        box-shadow: 0 0 30px maroon;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    #hi {
+        font-size: 2em
+    }
+
+    .pic {
+        background-position: center;
+        background-size: cover;
+        width: 73%;
+    }
+}  
+

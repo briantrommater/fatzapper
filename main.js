@@ -45,23 +45,40 @@ m50.addEventListener('click', () => {
 });
 
 
-const show = () => {
-    if (cals.textContent > 1500) {
+let show = () => {
+    if (cals.textContent > 3000) {
+        let obese = document.getElementById("breast");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 2500) {
+        let obese = document.getElementById("man");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 2000) {
+        let obese = document.getElementById("girl");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 1500) {
         let obese = document.getElementById("door");
-            obese.style.display = "block";
+        obese.style.display = "block";
     }
     else if (cals.textContent > 1000) {
         let obese = document.getElementById("slam");
-            obese.style.display = "block";
+        obese.style.display = "block";
     }
     else if (cals.textContent > 500) {
         let obese = document.getElementById("sumo");
-            obese.style.display = "block";
+        obese.style.display = "block";
     }
     else {
         let crazy = document.getElementById("duck")
             crazy.style.display = "block"
+            
     }
 }
 show();
+
+setTimeout(function restart() {
+    location.reload(true);
+}, 60000);
 
