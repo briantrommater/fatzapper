@@ -90,7 +90,7 @@ let show = () => {
         obese.style.display = "block";
     }
     else if (cals.textContent >= 4800 && cals.textContent <= 5250) {
-        let obese = document.getElementById("sumo");
+        let obese = document.getElementById("duck");
         obese.style.display = "block";
     }
     else if (cals.textContent >= 5300 && cals.textContent <= 5700) {
@@ -98,7 +98,7 @@ let show = () => {
         obese.style.display = "block";
     }
     else {
-        let crazy = document.getElementById("duck")
+        let crazy = document.getElementById("sumo")
             crazy.style.display = "block"
             
     }
