@@ -4,43 +4,53 @@ const getsavedScore = () => {
     return savedScore ? savedScore:  0
 }
 
-let score = getsavedScore()
-
-
+let score = getsavedScore(),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
 m100 = document.getElementById('m100'),
 m50 = document.getElementById('m50'),
-cals = document.getElementById('cals');
-console.log(score)
+cals = document.getElementById('cals'),
+scale = document.getElementById('weight');
+
 
 
 
 const renderScore = function () {
     cals.textContent = score
 }
-renderScore() 
 
+renderScore();
+
+const renderWeight = function () {
+    scale = (2750 - score)/3600;
+    weight.textContent = scale;
+}
+
+
+renderWeight(); 
+
+scale = scale;
+scale = weight.innerHTML;
 p100.addEventListener('click', () => {
-   localStorage.setItem("score",score+= 100)
+   localStorage.setItem("score", score+= 100)
    renderScore() 
 });
 
 p50.addEventListener('click', () => {
   
-    localStorage.setItem("score",score += 50)
+    localStorage.setItem("score", score += 50)
     renderScore() 
 });
 
 m100.addEventListener('click', () => {
    
-    localStorage.setItem("score",score -= 100)
+    localStorage.setItem("score", score -= 100)
     renderScore() 
 });
 
 m50.addEventListener('click', () => {
    
-    localStorage.setItem("score",score-= 50)
+    localStorage.setItem("score", score-= 50)
     renderScore() 
 });
 
@@ -80,5 +90,5 @@ show();
 
 setTimeout(function restart() {
     location.reload(true);
-}, 60000);
+}, 15000);
 
