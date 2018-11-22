@@ -23,7 +23,7 @@ renderScore();
 
 const renderWeight = function () {
     scale = (2750 - score)/3600;
-    weight.textContent = scale;
+    weight.textContent = scale.toFixed(2);
 }
 
 
@@ -56,28 +56,45 @@ m50.addEventListener('click', () => {
 
 
 let show = () => {
-    if (cals.textContent > 3000) {
+    
+    if (cals.textContent <= 1700) {
+        let obese = document.getElementById("third");
+        obese.style.display = "block";
+    }
+   else if (cals.textContent >= 1750 && cals.textContent <= 2100) {
+        let obese = document.getElementById("quarter");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent >= 2150 && cals.textContent <= 2600) {
+        let obese = document.getElementById("dime");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent >= 2650 && cals.textContent <= 2900) {
+        let obese = document.getElementById("penny");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 2900) {
         let obese = document.getElementById("breast");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 2500) {
-        let obese = document.getElementById("man");
-        obese.style.display = "block";
-    }
-    else if (cals.textContent > 2000) {
-        let obese = document.getElementById("girl");
-        obese.style.display = "block";
-    }
-    else if (cals.textContent > 1500) {
+    else if (cals.textContent > 3500) {
         let obese = document.getElementById("door");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 1000) {
+    else if (cals.textContent > 4000) {
+        let obese = document.getElementById("man");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 4500) {
         let obese = document.getElementById("slam");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 500) {
+    else if (cals.textContent > 5000) {
         let obese = document.getElementById("sumo");
+        obese.style.display = "block";
+    }
+    else if (cals.textContent > 5500) {
+        let obese = document.getElementById("girl");
         obese.style.display = "block";
     }
     else {

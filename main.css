@@ -63,6 +63,18 @@ body {
 #breast {
     display: none;
 }
+#penny {
+    display: none;
+}
+#dime {
+    display: none;
+}
+#quarter {
+    display: none;
+}
+#third {
+    display: none;
+}
 
 @media all and (max-width: 756px) {
     .button {
