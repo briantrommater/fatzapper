@@ -73,27 +73,27 @@ let show = () => {
         let obese = document.getElementById("penny");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 2900) {
+    else if (cals.textContent >= 2950 && cals.textContent <= 3450) {
         let obese = document.getElementById("breast");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 3500) {
+    else if (cals.textContent >= 3500 && cals.textContent <= 3850) {
         let obese = document.getElementById("door");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 4000) {
+    else if (cals.textContent >= 3900 && cals.textContent <= 4350) {
         let obese = document.getElementById("man");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 4500) {
+    else if (cals.textContent >= 4400 && cals.textContent <= 4750) {
         let obese = document.getElementById("slam");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 5000) {
+    else if (cals.textContent >= 4800 && cals.textContent <= 5250) {
         let obese = document.getElementById("sumo");
         obese.style.display = "block";
     }
-    else if (cals.textContent > 5500) {
+    else if (cals.textContent >= 5300 && cals.textContent <= 5700) {
         let obese = document.getElementById("girl");
         obese.style.display = "block";
     }

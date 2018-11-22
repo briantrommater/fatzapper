@@ -39,7 +39,7 @@ body {
 }
 
 .hi {
-    font-size: 6em;
+    font-size: 4em;
 }
 
 #sumo {
@@ -89,8 +89,8 @@ body {
         cursor: pointer;
     }
 
-    #hi {
-        font-size: 2em
+    .hi {
+        font-size: 1.6em;
     }
 
     .pic {
