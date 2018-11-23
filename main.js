@@ -10,8 +10,14 @@ p50 = document.getElementById('p50'),
 m100 = document.getElementById('m100'),
 m50 = document.getElementById('m50'),
 cals = document.getElementById('cals'),
-scale = document.getElementById('weight');
+scale = document.getElementById('weight'),
+date = new Date(),
+hour = date.getHours();
 
+
+if (hour > 4 || hour < 8) {
+   localStorage.clear();
+}
 
 
 
