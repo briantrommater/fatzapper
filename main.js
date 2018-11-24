@@ -15,7 +15,7 @@ date = new Date(),
 hour = date.getHours();
 
 
-if (hour > 4 || hour < 8) {
+if (hour > 4 && hour < 8) {
    localStorage.clear();
 }
 
