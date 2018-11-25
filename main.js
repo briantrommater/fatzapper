@@ -13,13 +13,19 @@ cals = document.getElementById('cals'),
 scale = document.getElementById('weight'),
 date = new Date(),
 hour = date.getHours();
+// inputWeight = document.getElementById("weight");
 
 
 if (hour > 4 && hour < 8) {
    localStorage.clear();
 }
 
+// inputWeight.addEventListener('change', function(e) {
+//   theirInput = e.target.value; 
+//   savedWeight = parseInt(theirInput);
+// }); 
 
+// console.log(savedWeight);
 
 const renderScore = function () {
     cals.textContent = score
@@ -27,15 +33,13 @@ const renderScore = function () {
 
 renderScore();
 
-const renderWeight = function () {
+const renderWeightLoss = function () {
     scale = (2750 - score)/3600;
     weight.textContent = scale.toFixed(2);
 }
 
+renderWeightLoss(); 
 
-renderWeight(); 
-
-scale = scale;
 scale = weight.innerHTML;
 p100.addEventListener('click', () => {
    localStorage.setItem("score", score+= 100)
@@ -67,7 +71,7 @@ let show = () => {
         let obese = document.getElementById("third");
         obese.style.display = "block";
     }
-   else if (cals.textContent >= 1750 && cals.textContent <= 2100) {
+    else if (cals.textContent >= 1750 && cals.textContent <= 2100) {
         let obese = document.getElementById("quarter");
         obese.style.display = "block";
     }
