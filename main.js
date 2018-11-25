@@ -5,16 +5,47 @@ const getsavedScore = () => {
 }
 
 let score = getsavedScore(),
+start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
 m100 = document.getElementById('m100'),
 m50 = document.getElementById('m50'),
 cals = document.getElementById('cals'),
 scale = document.getElementById('weight'),
+instructions = document.getElementsByClassName('instructions'),
+container = document.getElementsByClassName('container'),
 date = new Date(),
 hour = date.getHours();
 // inputWeight = document.getElementById("weight");
 
+const begin = () => {
+    if (score == 0) {
+        let theseAppear = document.getElementsByClassName("instructions");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }
+    }
+    else {
+        let theseAppear = document.getElementsByClassName("container");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }
+    }
+}
+
+begin();
+
+
+start.addEventListener('click', () => {
+    let theseAppear = document.getElementsByClassName("container");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }
+    let theseDisappear = document.getElementsByClassName("instructions");
+        for (let thing of theseDisappear) {
+            thing.style.display = "none";
+        }
+});
 
 if (hour > 4 && hour < 8) {
    localStorage.clear();
@@ -41,6 +72,7 @@ const renderWeightLoss = function () {
 renderWeightLoss(); 
 
 scale = weight.innerHTML;
+
 p100.addEventListener('click', () => {
    localStorage.setItem("score", score+= 100)
    renderScore() 
@@ -67,7 +99,7 @@ m50.addEventListener('click', () => {
 
 let show = () => {
     
-    if (cals.textContent <= 1700) {
+    if (cals.textContent >= 100 && cals.textContent <= 1700) {
         let obese = document.getElementById("third");
         obese.style.display = "block";
     }
@@ -107,10 +139,9 @@ let show = () => {
         let obese = document.getElementById("girl");
         obese.style.display = "block";
     }
-    else {
+    else if (cals.textContent >= 5800) {
         let crazy = document.getElementById("sumo")
             crazy.style.display = "block"
-            
     }
 }
 show();
