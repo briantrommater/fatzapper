@@ -20,13 +20,13 @@ hour = date.getHours();
 
 const begin = () => {
     if (score == 0) {
-        let theseAppear = document.getElementsByClassName("instructions");
+        let theseAppear = document.getElementsByClassName("instruct1");
         for (let thing of theseAppear) {
             thing.style.display = "block";
         }
     }
     else {
-        let theseAppear = document.getElementsByClassName("container");
+        let theseAppear = document.getElementsByClassName("scoreboard");
         for (let thing of theseAppear) {
             thing.style.display = "block";
         }
@@ -36,18 +36,29 @@ const begin = () => {
 begin();
 
 
-start.addEventListener('click', () => {
-    let theseAppear = document.getElementsByClassName("container");
-        for (let thing of theseAppear) {
-            thing.style.display = "block";
-        }
-    let theseDisappear = document.getElementsByClassName("instructions");
+next.addEventListener('click', () => {
+    let theseDisappear = document.getElementsByClassName("instruct1");
         for (let thing of theseDisappear) {
             thing.style.display = "none";
         }
+    let theseAppear = document.getElementsByClassName("instruct2");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }  
 });
 
-if (hour > 4 && hour < 8) {
+start.addEventListener('click', () => {
+    let theseDisappear = document.getElementsByClassName("instruct2");
+        for (let thing of theseDisappear) {
+            thing.style.display = "none";
+        }
+    let theseAppear = document.getElementsByClassName("scoreboard");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }  
+});
+
+if (hour > 4 && hour < 11) {
    localStorage.clear();
 }
 

@@ -12,18 +12,26 @@
 
 <body>
 
-    <div class="instructions">
+    <div class="instruct1">
         <div id="message"></div>
         <div id="hello"></div>
-        <div class="info">Keep track of calories</div>
-        <div class="info">Click negative buttons for exercise</div>
-        <div class="info">Google approximate calorie consumption</div>
-        <div class="info">15 minutes of intense exercise ~100 calories</div>
-        <div class="info">Resets every morning</div>
-        <div class="sbutton" id="start">START</div>
+        <div class="info">Goal 1: Log Calories to Lose Fat</div>
+        <div class="info">Use Nutrition Labels and google!</div>
+        <div class="info">Round to Nearest 50 & 100</div>
+        <div class="info">App Keeps Track All Day</div>
+        <div class="sbutton" id="next">GOT IT!</div>
     </div>
-<!-- <form><input type="number" id="weight"><br></form> -->
-    <div class="container">
+
+    <div class="instruct2">
+        <div id="message"></div>
+        <div id="hello"></div>
+        <div class="info">Goal 2: Log Exercise to Lose Fat</div>
+        <div class="info">Click Negative Buttons for Exercise</div>
+        <div class="info">~100 Calories Burned per 10 Minutes Exercise</div>
+        <div class="sbutton" id="start">START!</div>
+    </div>
+    
+    <div class="scoreboard">
         <div class="hi">Calories:<span id="cals">0</span></div>
         <div class="hi">lbs lost:<span id="weight">0</span></div>
         <div class="button" id="p100">+100 button</div>
@@ -43,7 +51,6 @@
     <img class="pic" id="dime" src="images/dime.png">
     <img class="pic" id="quarter" src="images/quarter.png">
     <img class="pic" id="third" src="speedy.gif">
-
 
     <script src="main.js"></script>
 </body>

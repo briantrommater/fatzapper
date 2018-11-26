@@ -6,28 +6,34 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(180, 100%, 50%));
 }
 
-.button {
-    display: inline-block;
-    font-size: 4em;
-    margin: 0.2em;
-    padding: 30px;
-    width: 20%;
-    border: 3px outset black;
-    box-shadow: 0 0 30px maroon;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.instructions {
+.instruct1 {
     display: none;
     border: 5px solid maroon;
-    font-size: 2.6em;
+    font-size: 2.0em;
+}
+
+.instruct2 {
+    display: none;
+    border: 5px solid maroon;
+    font-size: 2.0em;
 }
 
 .sbutton {
     border: 5px solid dodgerblue;
-    font-size: 2.2em;
+    font-size: 1.6em;
     margin: 0.3em;
+}
+
+.button {
+    display: inline-block;
+    font-size: 2em;
+    margin: 0.1em;
+    padding: 3px;
+    width: 33%;
+    border: 3px outset black;
+    box-shadow: 0 0 30px maroon;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 .info {
@@ -35,7 +41,7 @@ body {
     margin: 0.2em;
 }
 
-.container {
+.scoreboard {
     display: none;
 }
 
@@ -60,7 +66,14 @@ body {
 }
 
 .hi {
-    font-size: 4em;
+    font-size: 1.6em;
+}
+
+.pic {
+    background-position: center;
+    background-size: cover;
+    width: 73%;
+    display: none;
 }
 
 #sumo {
@@ -97,7 +110,7 @@ body {
     display: none;
 }
 
-@media all and (max-width: 756px) {
+/* @media all and (max-width: 756px) {
     .button {
         display: inline-block;
         font-size: 2em;
@@ -114,10 +127,6 @@ body {
         font-size: 1.6em;
     }
 
-    .pic {
-        background-position: center;
-        background-size: cover;
-        width: 73%;
-    }
+    
 }  
-
+ */
