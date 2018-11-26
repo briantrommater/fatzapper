@@ -9,13 +9,21 @@ body {
 .instruct1 {
     display: none;
     border: 5px solid maroon;
-    font-size: 2.0em;
+    font-size: 1.9em;
+    padding: 0.3em;
 }
 
 .instruct2 {
     display: none;
     border: 5px solid maroon;
-    font-size: 2.0em;
+    font-size: 1.9em;
+    padding: 0.3em;
+}
+
+.info {
+    border: 3px dotted royalblue;
+    margin: 0.5em;
+    padding: 0.2em;
 }
 
 .sbutton {
@@ -36,12 +44,9 @@ body {
     cursor: pointer;
 }
 
-.info {
-    border: 3px dotted royalblue;
-    margin: 0.2em;
-}
-
 .scoreboard {
+    width: 85%;
+    margin: 0 auto;
     display: none;
 }
 
@@ -72,7 +77,8 @@ body {
 .pic {
     background-position: center;
     background-size: cover;
-    width: 73%;
+    width: 80%;
+    margin: 0 auto;
     display: none;
 }
 
