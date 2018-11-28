@@ -32,51 +32,15 @@ body {
     margin: 0.3em;
 }
 
-.button {
-    display: inline-block;
-    font-size: 1.5em;
-    margin-top: 1.75em;
-    margin-right: 0.5em;
-    padding: 3px;
-    height: 4em;
-    width: 45%;
-    border: 3px outset black;
-    box-shadow: 0 0 30px darkblue;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
 .scoreboard {
-    width: 77%;
+    width: 79%;
     margin: 0 auto;
     display: none;
 }
 
-#p100 {
-    color: darkred;
-    background-color: crimson;
-    background: cover;
-}
-
-#p50 {
-    color: darkblue;
-    background-color: dodgerblue;
-}
-
-#m100 {
-    color: goldenrod;
-    background-color: gold;
-}
-
-#m50 {
-    color: seagreen;
-    background-color: lawngreen;
-}
-
 .top {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-top: 0.8em;
-    /* margin-left: 0.15em; */
     width: 80;
     border: 3px outset dodgerblue;
     box-shadow: 0 0 30px darkblue;
@@ -94,65 +58,41 @@ body {
     margin-left: 0.9em;
 }
 
-.pic {
-    background-position: center;
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-    display: none;
+.button {
+    display: inline-block;
+    font-size: 1.3em;
+    margin-top: 1.75em;
+    margin-right: 0.44em;
+    padding: 3px;
+    height: 4em;
+    width: 45%;
+    border: 3px outset black;
+    box-shadow: 0 0 30px darkblue;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
-#sumo {
-    display: none;
-}
-#duck {
-    display: none;
-}
-#door {
-    display: none;
-}
-#slam {
-    display: none;
-}
-#girl {
-    display: none;
-}
-#man {
-    display: none;
-}
-#breast {
-    display: none;
-}
-#penny {
-    display: none;
-}
-#dime {
-    display: none;
-}
-#quarter {
-    display: none;
-}
-#third {
-    display: none;
+.innerbutton {
+    margin-top: 1em;
+    margin-left: 0.6em;
 }
 
-/* @media all and (max-width: 756px) {
-    .button {
-        display: inline-block;
-        font-size: 2em;
-        margin: 0.1em;
-        padding: 3px;
-        width: 33%;
-        border: 3px outset black;
-        box-shadow: 0 0 30px maroon;
-        border-radius: 15px;
-        cursor: pointer;
-    }
+#p100 {
+    color: darkred;
+    background-color: crimson;
+}
 
-    .hi {
-        font-size: 1.6em;
-    }
+#p50 {
+    color: darkblue;
+    background-color: dodgerblue;
+}
 
-    
-}  
- */
+#m100 {
+    color: goldenrod;
+    background-color: gold;
+}
+
+#m50 {
+    color: seagreen;
+    background-color: lawngreen;
+}
