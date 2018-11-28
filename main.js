@@ -35,7 +35,6 @@ const begin = () => {
 
 begin();
 
-
 next.addEventListener('click', () => {
     let theseDisappear = document.getElementsByClassName("instruct1");
         for (let thing of theseDisappear) {
@@ -62,13 +61,6 @@ if (hour > 4 && hour < 11) {
    localStorage.clear();
 }
 
-// inputWeight.addEventListener('change', function(e) {
-//   theirInput = e.target.value; 
-//   savedWeight = parseInt(theirInput);
-// }); 
-
-// console.log(savedWeight);
-
 const renderScore = function () {
     cals.textContent = score
 }
@@ -76,7 +68,7 @@ const renderScore = function () {
 renderScore();
 
 const renderWeightLoss = function () {
-    scale = (2750 - score)/3600;
+    scale = (2200 - score)/3500;
     weight.textContent = scale.toFixed(2);
 }
 
@@ -85,24 +77,21 @@ renderWeightLoss();
 scale = weight.innerHTML;
 
 p100.addEventListener('click', () => {
-   localStorage.setItem("score", score+= 100)
-   renderScore() 
+    localStorage.setItem("score", score+= 100)
+    renderScore() 
 });
 
 p50.addEventListener('click', () => {
-  
     localStorage.setItem("score", score += 50)
     renderScore() 
 });
 
 m100.addEventListener('click', () => {
-   
     localStorage.setItem("score", score -= 100)
     renderScore() 
 });
 
-m50.addEventListener('click', () => {
-   
+m50.addEventListener('click', () => {  
     localStorage.setItem("score", score-= 50)
     renderScore() 
 });
@@ -110,51 +99,62 @@ m50.addEventListener('click', () => {
 
 let show = () => {
     
-    if (cals.textContent >= 100 && cals.textContent <= 1700) {
-        let obese = document.getElementById("third");
-        obese.style.display = "block";
+    if (cals.textContent < -300) {
+        document.body.style.background = "linear-gradient(to right, Chartreuse, rgba(0, 0, 0, 0), Chartreuse)"
     }
-    else if (cals.textContent >= 1750 && cals.textContent <= 2100) {
-        let obese = document.getElementById("quarter");
-        obese.style.display = "block";
+    else if (cals.textContent >= -300 && cals.textContent < 0) {
+        document.body.style.background = "linear-gradient(to right, DeepSkyBlue, rgba(0, 0, 0, 0), DeepSkyBlue)"
     }
-    else if (cals.textContent >= 2150 && cals.textContent <= 2600) {
-        let obese = document.getElementById("dime");
-        obese.style.display = "block";
+    else if (cals.textContent >= 50 && cals.textContent < 400) {
+        document.body.style.background = "linear-gradient(to right, rgb(111, 159, 216), rgba(0, 0, 0, 0), rgb(111, 159, 216))"
     }
-    else if (cals.textContent >= 2650 && cals.textContent <= 2900) {
-        let obese = document.getElementById("penny");
-        obese.style.display = "block";
+    else if (cals.textContent >= 400 && cals.textContent < 700) {
+        document.body.style.background = "linear-gradient(to right, rgb(220, 76, 70), rgba(0, 0, 0, 0), rgb(220, 76, 70))"
     }
-    else if (cals.textContent >= 2950 && cals.textContent <= 3450) {
-        let obese = document.getElementById("breast");
-        obese.style.display = "block";
+    else if (cals.textContent >= 700 && cals.textContent < 1000) {
+        document.body.style.background = "linear-gradient(to right, #87FF2A, rgba(0, 0, 0, 0), #87FF2A)"        
     }
-    else if (cals.textContent >= 3500 && cals.textContent <= 3850) {
-        let obese = document.getElementById("door");
-        obese.style.display = "block";
+    else if (cals.textContent >= 1000 && cals.textContent < 1300) {
+        document.body.style.background = "linear-gradient(to right, #E936A7, rgba(0, 0, 0, 0), #E936A7)"        
     }
-    else if (cals.textContent >= 3900 && cals.textContent <= 4350) {
-        let obese = document.getElementById("man");
-        obese.style.display = "block";
+    else if (cals.textContent >= 1300 && cals.textContent < 1600) {
+        document.body.style.background = "linear-gradient(to right, #FFF700, rgba(0, 0, 0, 0), #FFF700)"        
     }
-    else if (cals.textContent >= 4400 && cals.textContent <= 4750) {
-        let obese = document.getElementById("slam");
-        obese.style.display = "block";
+    else if (cals.textContent >= 1600 && cals.textContent < 1900) {
+        document.body.style.background = "linear-gradient(to right, #9C51B6, rgba(0, 0, 0, 0), #9C51B6)"        
     }
-    else if (cals.textContent >= 4800 && cals.textContent <= 5250) {
-        let obese = document.getElementById("duck");
-        obese.style.display = "block";
+    else if (cals.textContent >= 1900 && cals.textContent < 2200) {
+        document.body.style.background = "linear-gradient(to right, #0066FF, rgba(0, 0, 0, 0), #0066FF)"        
     }
-    else if (cals.textContent >= 5300 && cals.textContent <= 5700) {
-        let obese = document.getElementById("girl");
-        obese.style.display = "block";
+    else if (cals.textContent >= 2200 && cals.textContent < 2500) {
+        document.body.style.background = "linear-gradient(to right, #B33B24, rgba(0, 0, 0, 0))"                
     }
-    else if (cals.textContent >= 5800) {
-        let crazy = document.getElementById("sumo")
-            crazy.style.display = "block"
+    else if (cals.textContent >= 2500 && cals.textContent < 2800) {
+        document.body.style.background = "linear-gradient(to left, #7BA05B, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 2800 && cals.textContent < 3200) {
+        document.body.style.background = "linear-gradient(to right, #0A7E8C, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 3200 && cals.textContent < 3600) {
+        document.body.style.background = "linear-gradient(to left, #FF7F49, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 3600 && cals.textContent < 4100) {
+        document.body.style.background = "linear-gradient(to right, #B5B35C, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 4100 && cals.textContent < 4600) {
+        document.body.style.background = "linear-gradient(to left, #0A7E8C, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 4600 && cals.textContent < 5100) {
+        document.body.style.background = "linear-gradient(to right, #A57164, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 5100 && cals.textContent < 5600) {
+        document.body.style.background = "linear-gradient(to left, #AF6E4D, rgba(0, 0, 0, 0))"                        
+    }
+    else if (cals.textContent >= 5600) {
+        document.body.style.background = "linear-gradient(to right, #1B1B1B, rgba(0, 0, 0, 0))"                       
     }
 }
+
 show();
 
 setTimeout(function restart() {
