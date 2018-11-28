@@ -9,7 +9,8 @@ body {
 .instruct1 {
     display: none;
     border: 5px solid maroon;
-    font-size: 1.85em;
+    font-size: 1.80em;
+    text-align: center;
     padding: 0.3em;
 }
 
@@ -28,8 +29,8 @@ body {
 
 .sbutton {
     border: 5px solid dodgerblue;
-    font-size: 1.6em;
-    margin: 0.3em;
+    font-size: 1.5em;
+    margin: 0.7em;
 }
 
 .scoreboard {
