@@ -71,7 +71,22 @@ body {
     border-radius: 15px;
     cursor: pointer;
 }
+#reset {
+    background-color: darkred;
+    margin-top: 3.3em;
+    margin-left: 6em;
+    width: 17%;
+    height: 1.3em;
+    border: 3px outset black;
+    box-shadow: 0 0 30px darkblue;
+    border-radius: 15px;
+    cursor: pointer;
+}
 
+#innerreset {
+    margin-left: 0.4em;
+    font-size: 0.9em;
+}
 .innerbutton {
     margin-top: 1em;
     margin-left: 0.6em;
@@ -96,3 +111,4 @@ body {
     color: seagreen;
     background-color: lawngreen;
 }
+

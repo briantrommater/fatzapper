@@ -57,7 +57,7 @@ start.addEventListener('click', () => {
         }  
 });
 
-if (hour > 4 && hour < 11) {
+if (hour > 4 && hour < 10) {
    localStorage.clear();
 }
 
@@ -68,7 +68,7 @@ const renderScore = function () {
 renderScore();
 
 const renderWeightLoss = function () {
-    scale = (2200 - score)/3500;
+    scale = (2350 - score)/3500;
     weight.textContent = scale.toFixed(2);
 }
 
@@ -78,24 +78,28 @@ scale = weight.innerHTML;
 
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
-    renderScore() 
+    renderScore(); 
 });
 
 p50.addEventListener('click', () => {
     localStorage.setItem("score", score += 50)
-    renderScore() 
+    renderScore(); 
 });
 
 m100.addEventListener('click', () => {
     localStorage.setItem("score", score -= 100)
-    renderScore() 
+    renderScore();
 });
 
 m50.addEventListener('click', () => {  
     localStorage.setItem("score", score-= 50)
-    renderScore() 
+    renderScore(); 
 });
 
+reset.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload(true);
+});
 
 let show = () => {
     
@@ -159,5 +163,5 @@ show();
 
 setTimeout(function restart() {
     location.reload(true);
-}, 15000);
+}, 12500);
 
