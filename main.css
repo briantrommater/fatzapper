@@ -34,18 +34,20 @@ body {
 
 .button {
     display: inline-block;
-    font-size: 2em;
-    margin: 0.1em;
+    font-size: 1.5em;
+    margin-top: 1.75em;
+    margin-right: 0.5em;
     padding: 3px;
-    width: 33%;
+    height: 4em;
+    width: 45%;
     border: 3px outset black;
-    box-shadow: 0 0 30px maroon;
+    box-shadow: 0 0 30px darkblue;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .scoreboard {
-    width: 85%;
+    width: 77%;
     margin: 0 auto;
     display: none;
 }
@@ -53,6 +55,7 @@ body {
 #p100 {
     color: darkred;
     background-color: crimson;
+    background: cover;
 }
 
 #p50 {
@@ -70,8 +73,25 @@ body {
     background-color: lawngreen;
 }
 
-.hi {
+.top {
     font-size: 1.6em;
+    margin-top: 0.8em;
+    /* margin-left: 0.15em; */
+    width: 80;
+    border: 3px outset dodgerblue;
+    box-shadow: 0 0 30px darkblue;
+    border-radius: 11px;
+    height: 2em;
+}
+
+#lbs {
+    margin-top: 0.31em;
+    margin-left: 0.9em;
+}
+
+#energy {
+    margin-top: 0.31em;
+    margin-left: 0.9em;
 }
 
 .pic {
