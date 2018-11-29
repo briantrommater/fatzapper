@@ -3,8 +3,14 @@ const getsavedScore = () => {
     savedScore = parseInt(savedScore)
     return savedScore ? savedScore:  0
 }
+const getsavedWeight = () => {
+    let savedWeight = localStorage.getItem("heavy")
+    savedWeight = parseInt(savedWeight)
+    return savedWeight ? savedWeight:  0
+}
 
 let score = getsavedScore(),
+heavy = getsavedWeight(),
 start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
@@ -13,7 +19,9 @@ m50 = document.getElementById('m50'),
 cals = document.getElementById('cals'),
 scale = document.getElementById('weight'),
 instructions = document.getElementsByClassName('instructions'),
-container = document.getElementsByClassName('container'),
+height = document.getElementById('tall'),
+lbs = document.getElementById('fat'),
+scoreboard = document.getElementsByClassName('scoreboard'),
 date = new Date(),
 hour = date.getHours();
 // inputWeight = document.getElementById("weight");
@@ -46,8 +54,19 @@ next.addEventListener('click', () => {
         }  
 });
 
-start.addEventListener('click', () => {
+gotit.addEventListener('click', () => {
     let theseDisappear = document.getElementsByClassName("instruct2");
+        for (let thing of theseDisappear) {
+            thing.style.display = "none";
+        }
+    let theseAppear = document.getElementsByClassName("instruct3");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }  
+});
+
+start.addEventListener('click', () => {
+    let theseDisappear = document.getElementsByClassName("instruct3");
         for (let thing of theseDisappear) {
             thing.style.display = "none";
         }
@@ -61,20 +80,27 @@ if (hour > 4 && hour < 10) {
    localStorage.clear();
 }
 
-const renderScore = function () {
+let renderScore = () => {
     cals.textContent = score
+}
+let renderWeight = () => {
+    fat.textContent = weight
 }
 
 renderScore();
+renderWeight();
 
-const renderWeightLoss = function () {
+let renderWeightLoss = () =>{
     scale = (2350 - score)/3500;
     weight.textContent = scale.toFixed(2);
 }
-
+console.log(height);
+console.log(fat.name.value);
+console.log(tall);
+console.log(lbs);
+console.log(heavy);
+console.log(fat);
 renderWeightLoss(); 
-
-scale = weight.innerHTML;
 
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
@@ -100,6 +126,7 @@ reset.addEventListener('click', () => {
     localStorage.clear();
     location.reload(true);
 });
+console.log(fat.name.valueOf);
 
 let show = () => {
     
@@ -163,5 +190,5 @@ show();
 
 setTimeout(function restart() {
     location.reload(true);
-}, 12500);
+}, 25000);
 

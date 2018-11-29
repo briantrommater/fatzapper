@@ -20,6 +20,13 @@ body {
     padding: 0.3em;
 }
 
+.instruct3 {
+    display: none;
+    font-size: 1.6em;
+    text-align: center;
+    padding: 0.3em;
+}
+
 .info {
     border: 3px dotted royalblue;
     margin: 0.5em;
@@ -62,7 +69,6 @@ body {
     display: inline-block;
     font-size: 1.3em;
     margin-top: 1.75em;
-    margin-right: 0.44em;
     padding: 3px;
     height: 4em;
     width: 45%;
@@ -78,29 +84,29 @@ body {
 }
 
 #p100 {
-    color: darkred;
     background-color: crimson;
+    margin-left: 0.2em;
+    margin-right: 0.45em;
 }
 
 #p50 {
-    color: darkblue;
     background-color: dodgerblue;
 }
 
 #m100 {
-    color: goldenrod;
     background-color: gold;
+    margin-left: 0.2em;
+    margin-right: 0.45em;
 }
 
 #m50 {
-    color: seagreen;
     background-color: lawngreen;
 }
 
 #reset {
     background-color: darkred;
     margin-top: 3.3em;
-    margin-left: 6.2em;
+    margin-left: 6.5em;
     width: 17%;
     height: 1.3em;
     border: 3px outset black;
