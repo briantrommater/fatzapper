@@ -90,43 +90,41 @@ let renderWeight = () => {
 renderScore();
 renderWeight();
 
-let renderWeightLoss = () =>{
+let renderWeightLoss = () => {
     scale = (2350 - score)/3500;
     weight.textContent = scale.toFixed(2);
 }
-console.log(height);
-console.log(fat.name.value);
-console.log(tall);
-console.log(lbs);
-console.log(heavy);
-console.log(fat);
+
 renderWeightLoss(); 
 
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
     renderScore(); 
+    show();
 });
 
 p50.addEventListener('click', () => {
     localStorage.setItem("score", score += 50)
     renderScore(); 
+    show();
 });
 
 m100.addEventListener('click', () => {
     localStorage.setItem("score", score -= 100)
     renderScore();
+    show();
 });
 
 m50.addEventListener('click', () => {  
     localStorage.setItem("score", score-= 50)
     renderScore(); 
+    show();
 });
 
 reset.addEventListener('click', () => {
     localStorage.clear();
     location.reload(true);
 });
-console.log(fat.name.valueOf);
 
 let show = () => {
     
@@ -186,9 +184,6 @@ let show = () => {
     }
 }
 
-show();
+// show();
 
-setTimeout(function restart() {
-    location.reload(true);
-}, 25000);
 
