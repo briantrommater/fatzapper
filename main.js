@@ -95,29 +95,32 @@ let renderWeightLoss = () => {
     weight.textContent = scale.toFixed(2);
 }
 
-renderWeightLoss(); 
 
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
     renderScore(); 
+    renderWeightLoss(); 
     show();
 });
 
 p50.addEventListener('click', () => {
     localStorage.setItem("score", score += 50)
     renderScore(); 
+    renderWeightLoss(); 
     show();
 });
 
 m100.addEventListener('click', () => {
     localStorage.setItem("score", score -= 100)
     renderScore();
+    renderWeightLoss(); 
     show();
 });
 
 m50.addEventListener('click', () => {  
     localStorage.setItem("score", score-= 50)
     renderScore(); 
+    renderWeightLoss(); 
     show();
 });
 
