@@ -3,6 +3,7 @@ const getsavedScore = () => {
     savedScore = parseInt(savedScore)
     return savedScore ? savedScore:  0
 }
+
 const getsavedWeight = () => {
     let savedWeight = localStorage.getItem("heavy")
     savedWeight = parseInt(savedWeight)
@@ -79,14 +80,15 @@ start.addEventListener('click', () => {
 document.querySelector("#miff").addEventListener("submit", (e) => {
     e.preventDefault();
     let height = e.target.elements.height.value;
-    let weight = e.target.elements.heavy.value;
-    let ms = ((5.68 * weight) + (19.84 * height) - 150);
+    let wt = e.target.elements.heavy.value;
+    let ms = ((5.68 * wt) + (19.84 * height) - 366);
     michaelScott = ms;
 })
 
 let renderScore = () => {
-    cals.textContent = score
+    cals.textContent = score;
 }
+
 let renderWeight = () => {
     fat.textContent = weight
 }
