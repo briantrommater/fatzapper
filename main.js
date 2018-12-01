@@ -24,7 +24,6 @@ lbs = document.getElementById('fat'),
 scoreboard = document.getElementsByClassName('scoreboard'),
 date = new Date(),
 hour = date.getHours();
-// inputWeight = document.getElementById("weight");
 
 const begin = () => {
     if (score == 0) {
@@ -76,10 +75,6 @@ start.addEventListener('click', () => {
         }  
 });
 
-if (hour > 4 && hour < 10) {
-   localStorage.clear();
-}
-
 let renderScore = () => {
     cals.textContent = score
 }
@@ -91,10 +86,9 @@ renderScore();
 renderWeight();
 
 let renderWeightLoss = () => {
-    scale = (2350 - score)/3500;
-    weight.textContent = scale.toFixed(2);
+    scale = (2350 - score)/218.75;
+    weight.textContent = scale.toFixed(1);
 }
-
 
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
@@ -186,7 +180,3 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, #1B1B1B, rgba(0, 0, 0, 0))"                       
     }
 }
-
-// show();
-
-

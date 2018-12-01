@@ -28,15 +28,20 @@ body {
 }
 
 .info {
-    border: 3px dotted royalblue;
+    border: 3px solid royalblue;
     margin: 0.5em;
     padding: 0.2em;
+    box-shadow: 0 0 30px darkblue;
+    border-radius: 11px;
 }
 
 .sbutton {
     border: 5px solid dodgerblue;
     font-size: 1.33em;
     margin: 0.7em;
+    box-shadow: 0 0 30px darkblue;
+    border-radius: 11px;
+    cursor: pointer;
 }
 
 .scoreboard {
@@ -104,13 +109,13 @@ body {
 }
 
 #reset {
-    background-color: darkred;
+    background-color: red;
     margin-top: 3.3em;
     margin-left: 6.5em;
     width: 17%;
     height: 1.3em;
     border: 3px outset black;
-    box-shadow: 0 0 30px darkblue;
+    box-shadow: 0 0 30px darkred;
     border-radius: 15px;
     cursor: pointer;
 }
