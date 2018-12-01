@@ -23,7 +23,8 @@ height = document.getElementById('tall'),
 lbs = document.getElementById('fat'),
 scoreboard = document.getElementsByClassName('scoreboard'),
 date = new Date(),
-hour = date.getHours();
+hour = date.getHours(),
+michaelScott;
 
 const begin = () => {
     if (score == 0) {
@@ -75,6 +76,14 @@ start.addEventListener('click', () => {
         }  
 });
 
+document.querySelector("#miff").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let height = e.target.elements.height.value;
+    let weight = e.target.elements.heavy.value;
+    let ms = ((5.68 * weight) + (19.84 * height) - 150);
+    michaelScott = ms;
+})
+
 let renderScore = () => {
     cals.textContent = score
 }
@@ -86,8 +95,9 @@ renderScore();
 renderWeight();
 
 let renderWeightLoss = () => {
-    scale = (2350 - score)/218.75;
+    scale = (michaelScott - score)/218.75;
     weight.textContent = scale.toFixed(1);
+    console.log(michaelScott);
 }
 
 p100.addEventListener('click', () => {
