@@ -5,26 +5,23 @@ const getsavedScore = () => {
 }
 
 const getsavedWeight = () => {
-    let savedWeight = localStorage.getItem("heavy")
+    let savedWeight = localStorage.getItem("ounces")
     savedWeight = parseInt(savedWeight)
     return savedWeight ? savedWeight:  0
 }
 
 let score = getsavedScore(),
-heavy = getsavedWeight(),
+ounces = getsavedWeight(),
 start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
 m100 = document.getElementById('m100'),
 m50 = document.getElementById('m50'),
 cals = document.getElementById('cals'),
-scale = document.getElementById('weight'),
-instructions = document.getElementsByClassName('instructions'),
+weight = document.getElementById('weight'),
 height = document.getElementById('tall'),
 lbs = document.getElementById('fat'),
 scoreboard = document.getElementsByClassName('scoreboard'),
-date = new Date(),
-hour = date.getHours(),
 michaelScott;
 
 const begin = () => {
@@ -71,9 +68,22 @@ start.addEventListener('click', () => {
         for (let thing of theseDisappear) {
             thing.style.display = "none";
         }
+    let theseAppear = document.getElementsByClassName("instruct4");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+            document.body.style.background = "pink";
+        }  
+});
+
+okAlready.addEventListener('click', () => {
+    let theseDisappear = document.getElementsByClassName("instruct4");
+        for (let thing of theseDisappear) {
+            thing.style.display = "none";
+        }
     let theseAppear = document.getElementsByClassName("scoreboard");
         for (let thing of theseAppear) {
             thing.style.display = "block";
+            document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)";
         }  
 });
 
@@ -90,15 +100,18 @@ let renderScore = () => {
 }
 
 let renderWeight = () => {
-    fat.textContent = weight
+    weight.textContent = ounces;
+    console.log(weight.textContent);
+
 }
 
 renderScore();
 renderWeight();
 
 let renderWeightLoss = () => {
-    scale = (michaelScott - score)/218.75;
-    weight.textContent = scale.toFixed(1);
+    ounces = (michaelScott - score)/218.75;
+    weight.textContent = ounces.toFixed(1);
+    console.log(weight.textContent);
     console.log(michaelScott);
 }
 
