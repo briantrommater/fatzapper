@@ -34,6 +34,14 @@ body {
     padding: 0.3em;
 }
 
+.i4 {
+    border: 3px solid #FF355E;
+    margin: 0.5em;
+    padding: 0.2em;
+    box-shadow: 0 0 30px #FD5B78;
+    border-radius: 11px;
+}
+
 .info {
     border: 3px solid royalblue;
     margin: 0.5em;
