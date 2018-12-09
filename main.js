@@ -89,8 +89,10 @@ okAlready.addEventListener('click', () => {
 
 document.querySelector("#miff").addEventListener("submit", (e) => {
     e.preventDefault();
-    let height = e.target.elements.height.value;
-    let wt = e.target.elements.heavy.value;
+    let heightp = e.target.elements.height.value;
+    let height = parseFloat(heightp);
+    let wtp = e.target.elements.heavy.value;
+    let wt = parseFloat(wtp);
     let ms = ((5.68 * wt) + (19.84 * height) - 366);
     michaelScott = ms;
 })
@@ -157,6 +159,7 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, DeepSkyBlue, rgba(0, 0, 0, 0), DeepSkyBlue)"
     }
     else if (cals.textContent >= 50 && cals.textContent < 400) {
+        document.querySelector("#yum").play();
         document.body.style.background = "linear-gradient(to right, rgb(111, 159, 216), rgba(0, 0, 0, 0), rgb(111, 159, 216))"
     }
     else if (cals.textContent >= 400 && cals.textContent < 700) {
