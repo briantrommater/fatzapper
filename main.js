@@ -205,6 +205,7 @@ let show = () => {
         document.body.style.background = "linear-gradient(to left, #AF6E4D, rgba(0, 0, 0, 0))"                        
     }
     else if (cals.textContent >= 5600) {
+        document.querySelector("#fl").play();
         document.body.style.background = "linear-gradient(to right, #1B1B1B, rgba(0, 0, 0, 0))"                       
     }
 }
