@@ -166,12 +166,14 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, rgb(220, 76, 70), rgba(0, 0, 0, 0), rgb(220, 76, 70))"
     }
     else if (cals.textContent >= 700 && cals.textContent < 1000) {
+        document.querySelector("#burp").play();
         document.body.style.background = "linear-gradient(to right, #87FF2A, rgba(0, 0, 0, 0), #87FF2A)"        
     }
     else if (cals.textContent >= 1000 && cals.textContent < 1300) {
         document.body.style.background = "linear-gradient(to right, #E936A7, rgba(0, 0, 0, 0), #E936A7)"        
     }
     else if (cals.textContent >= 1300 && cals.textContent < 1600) {
+        document.querySelector("#burpb").play();
         document.body.style.background = "linear-gradient(to right, #FFF700, rgba(0, 0, 0, 0), #FFF700)"        
     }
     else if (cals.textContent >= 1600 && cals.textContent < 1900) {
@@ -187,6 +189,7 @@ let show = () => {
         document.body.style.background = "linear-gradient(to left, #7BA05B, rgba(0, 0, 0, 0))"                        
     }
     else if (cals.textContent >= 2800 && cals.textContent < 3200) {
+        document.querySelector("#snow").play();
         document.body.style.background = "linear-gradient(to right, #0A7E8C, rgba(0, 0, 0, 0))"                        
     }
     else if (cals.textContent >= 3200 && cals.textContent < 3600) {
