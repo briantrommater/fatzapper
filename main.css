@@ -20,6 +20,13 @@ body {
     padding: 0.3em;
 }
 
+.instruct21 {
+    display: none;
+    font-size: 1.6em;
+    text-align: center;
+    padding: 0.3em;
+}
+
 .instruct3 {
     display: none;
     font-size: 1.6em;
@@ -145,6 +152,10 @@ body {
         font-size: 3.75em;
     }
     .instruct2 {
+        font-size: 3.6em;
+    }
+    
+    .instruct21 {
         font-size: 3.6em;
     }
     

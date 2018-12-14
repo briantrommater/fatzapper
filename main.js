@@ -57,10 +57,23 @@ gotit.addEventListener('click', () => {
         for (let thing of theseDisappear) {
             thing.style.display = "none";
         }
+    let theseAppear = document.getElementsByClassName("instruct21");
+        for (let thing of theseAppear) {
+            thing.style.display = "block";
+        }  
+        document.querySelector("#bark1").play();
+});
+
+woof.addEventListener('click', () => {
+    let theseDisappear = document.getElementsByClassName("instruct21");
+        for (let thing of theseDisappear) {
+            thing.style.display = "none";
+        }
     let theseAppear = document.getElementsByClassName("instruct3");
         for (let thing of theseAppear) {
             thing.style.display = "block";
         }  
+        document.querySelector("#growl").play();
 });
 
 start.addEventListener('click', () => {
@@ -85,6 +98,7 @@ okAlready.addEventListener('click', () => {
             thing.style.display = "block";
             document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)";
         }  
+        document.querySelector("#bark").play();
 });
 
 document.querySelector("#miff").addEventListener("submit", (e) => {
