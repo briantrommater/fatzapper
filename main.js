@@ -73,7 +73,7 @@ woof.addEventListener('click', () => {
         for (let thing of theseAppear) {
             thing.style.display = "block";
         }  
-        document.querySelector("#growl").play();
+        document.querySelector("#bark").play();
 });
 
 start.addEventListener('click', () => {
@@ -226,3 +226,10 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, #1B1B1B, rgba(0, 0, 0, 0))"                       
     }
 }
+
+
+var String1 = "Goal 1: Log Calories to Lose Fat";
+var wtString1 = String1.italics();
+document.querySelector("#first").innerHTML = wtString1;
+
+
