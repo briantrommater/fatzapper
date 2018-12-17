@@ -228,8 +228,57 @@ let show = () => {
 }
 
 
-var String1 = "Goal 1: Log Calories to Lose Fat";
-var wtString1 = String1.italics();
+let String1 = "Goal 1: Log Calories to Lose Fat";
+let wtString1 = String1.italics();
 document.querySelector("#first").innerHTML = wtString1;
+
+let wtString2 = "Use Nutrition Labels and google!";
+document.querySelector("#second").innerHTML = wtString2;
+
+let wtString3 = "App Keeps Track All Day";
+document.querySelector("#third").innerHTML = wtString3;
+
+let wtString4 = "Use Nutrition Labels and google!";
+document.querySelector("#fourth").innerHTML = wtString4;
+
+let wtString5 = "GOT IT!";
+document.querySelector("#next").innerHTML = wtString5;
+
+let exString1 = "Goal 2: Log Exercise to Lose Fat";
+document.querySelector("#fifth").innerHTML = exString1;
+
+let exString2 = "Click Negative Buttons for Exercise";
+document.querySelector("#sixth").innerHTML = exString2;
+
+let exString3 = "~100 Calories Burned per 10 Minutes Exercise";
+document.querySelector("#seventh").innerHTML = exString3;
+
+let exString4 = "Google your exercise of choice for increased accuracy";
+document.querySelector("#eighth").innerHTML = exString4;
+
+let exString5 = "GOT IT!";
+document.querySelector("#gotit").innerHTML = exString5;
+
+let pugString1 = "Are You a Pug Looking to Shed Pounds?";
+document.querySelector("#nineth").innerHTML = pugString1;
+let pugString2 = "Enter 32 Inches into Height Calulation for Pugs!";
+document.querySelector("#tenth").innerHTML = pugString2;
+let pugString3 = "WOOF!";
+document.querySelector("#woof").innerHTML = pugString3;
+
+let miffString1 = "This Fat Burner Uses a Modified Mifflin-St Jeor Equation to Predict Daily Fat Loss to the Tenth of an Ounce";
+document.querySelector("#eleventh").innerHTML = miffString1;
+let miffString2 = "Only your phone knows the input.  Reset each day";
+document.querySelector("#twelveth").innerHTML = miffString2;
+
+let femString1 = "This App is Most Accurate for Females";
+document.querySelector("#thirteenth").innerHTML = femString1;
+let femString2 = "Males Will Lose Slightly More";
+document.querySelector("#fourteenth").innerHTML = femString2;
+let femString3 = "The Calculation Ensures You Lose At Least What is Stated";
+document.querySelector("#fifteenth").innerHTML = femString3;
+let femString4 = "LET'S GO!";
+document.querySelector("#okAlready").innerHTML = femString4;
+
 
 

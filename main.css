@@ -110,6 +110,11 @@ body {
     margin-left: 0.6em;
 }
 
+#pug {
+    border: 3px outset black;
+    box-shadow: 0 0 30px darkblue;
+}
+
 #p100 {
     background-color: crimson;
     margin-left: 0.2em;
