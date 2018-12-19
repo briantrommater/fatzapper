@@ -1,3 +1,4 @@
+//local storage stuff
 const getsavedScore = () => {
     let savedScore = localStorage.getItem("score")
     savedScore = parseInt(savedScore)
@@ -6,12 +7,20 @@ const getsavedScore = () => {
 
 const getsavedWeight = () => {
     let savedWeight = localStorage.getItem("ounces")
-    savedWeight = parseInt(savedWeight)
+    savedWeight = parseFloat(savedWeight)
     return savedWeight ? savedWeight:  0
 }
 
+const getsavedScott = () => {
+    let savedScott = localStorage.getItem("michaelScott")
+    savedScott = parseFloat(savedScott)
+    return savedScott ? savedScott:  0
+}
+
+//declare variables
 let score = getsavedScore(),
 ounces = getsavedWeight(),
+michaelScott = getsavedScott,
 start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
@@ -21,9 +30,9 @@ cals = document.getElementById('cals'),
 weight = document.getElementById('weight'),
 height = document.getElementById('tall'),
 lbs = document.getElementById('fat'),
-scoreboard = document.getElementsByClassName('scoreboard'),
-michaelScott;
+scoreboard = document.getElementsByClassName('scoreboard');
 
+//next 6 blocks are simply disappear-reappear DOM manipulation
 const begin = () => {
     if (score == 0) {
         let theseAppear = document.getElementsByClassName("instruct1");
@@ -101,6 +110,7 @@ okAlready.addEventListener('click', () => {
         document.querySelector("#bark").play();
 });
 
+//initialize the miff alg with the users inputs
 document.querySelector("#miff").addEventListener("submit", (e) => {
     e.preventDefault();
     let heightp = e.target.elements.height.value;
@@ -111,26 +121,23 @@ document.querySelector("#miff").addEventListener("submit", (e) => {
     michaelScott = ms;
 })
 
+//calories
 let renderScore = () => {
     cals.textContent = score;
 }
 
-let renderWeight = () => {
-    weight.textContent = ounces;
-    console.log(weight.textContent);
-
-}
-
 renderScore();
-renderWeight();
+// renderWeightLoss();
 
+//recalculation of as user clicks thru out the day
 let renderWeightLoss = () => {
-    ounces = (michaelScott - score)/218.75;
+    ounces = (michaelScott - score)/ 218.75;
     weight.textContent = ounces.toFixed(1);
     console.log(weight.textContent);
     console.log(michaelScott);
 }
 
+//5 click events
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100)
     renderScore(); 
@@ -164,6 +171,7 @@ reset.addEventListener('click', () => {
     location.reload(true);
 });
 
+//some background manipulation events and sounds
 let show = () => {
     
     if (cals.textContent < -300) {
@@ -227,35 +235,27 @@ let show = () => {
     }
 }
 
-
-let String1 = "Goal 1: Log Calories to Lose Fat";
-let wtString1 = String1.italics();
+//manipulate strings outside dom
+var String1 = "Goal 1: Log Calories to Lose Fat";
+var wtString1 = String1.fontcolor("blue");
 document.querySelector("#first").innerHTML = wtString1;
-
 let wtString2 = "Use Nutrition Labels and google!";
 document.querySelector("#second").innerHTML = wtString2;
-
 let wtString3 = "App Keeps Track All Day";
 document.querySelector("#third").innerHTML = wtString3;
-
 let wtString4 = "Use Nutrition Labels and google!";
 document.querySelector("#fourth").innerHTML = wtString4;
-
 let wtString5 = "GOT IT!";
 document.querySelector("#next").innerHTML = wtString5;
 
 let exString1 = "Goal 2: Log Exercise to Lose Fat";
 document.querySelector("#fifth").innerHTML = exString1;
-
 let exString2 = "Click Negative Buttons for Exercise";
 document.querySelector("#sixth").innerHTML = exString2;
-
 let exString3 = "~100 Calories Burned per 10 Minutes Exercise";
 document.querySelector("#seventh").innerHTML = exString3;
-
 let exString4 = "Google your exercise of choice for increased accuracy";
 document.querySelector("#eighth").innerHTML = exString4;
-
 let exString5 = "GOT IT!";
 document.querySelector("#gotit").innerHTML = exString5;
 
