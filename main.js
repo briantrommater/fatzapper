@@ -6,7 +6,7 @@ const getsavedScore = () => {
 }
 
 const getsavedWeight = () => {
-    let savedWeight = localStorage.getItem("ounces")
+    let savedWeight = localStorage.getItem("slim")
     savedWeight = parseFloat(savedWeight)
     return savedWeight ? savedWeight:  0
 }
@@ -127,19 +127,19 @@ let renderScore = () => {
 }
 
 renderScore();
-// renderWeightLoss();
 
 //recalculation of as user clicks thru out the day
 let renderWeightLoss = () => {
     ounces = (michaelScott - score)/ 218.75;
     weight.textContent = ounces.toFixed(1);
-    console.log(weight.textContent);
-    console.log(michaelScott);
+    slim = weight.textContent;
+    console.log(slim);
 }
 
 //5 click events
 p100.addEventListener('click', () => {
-    localStorage.setItem("score", score+= 100)
+    localStorage.setItem("score", score+= 100);
+    localStorage.setItem("slim", ounces);
     renderScore(); 
     renderWeightLoss(); 
     show();
