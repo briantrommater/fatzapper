@@ -19,7 +19,7 @@ const getsavedScott = () => {
 
 //declare variables
 let score = getsavedScore(),
-ounces = getsavedWeight(),
+slim = getsavedWeight(),
 michaelScott = getsavedScott,
 start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
@@ -139,7 +139,7 @@ let renderWeightLoss = () => {
 //5 click events
 p100.addEventListener('click', () => {
     localStorage.setItem("score", score+= 100);
-    localStorage.setItem("slim", ounces);
+    localStorage.setItem("slim", slim++);
     renderScore(); 
     renderWeightLoss(); 
     show();
