@@ -165,44 +165,86 @@ body {
 
 .star-1 {
     margin-top: 1.6%; 
-    margin-left: 60%;
+    margin-left: 13%;
+    animation-name: twinkle-2;
+    animation-duration: 2s;
+}
+
+.star-2 {
+    margin-top: 3.6%;
+    margin-left: 38%;
+    animation-name: twinkle-3;
+    animation-duration: 5.1s;
+}
+
+.star-3 {
+    margin-top: 2.9%;
+    margin-left: 52%;
     animation-name: twinkle-1;
-    animation-duration: 5s;
+    animation-duration: 4.4s;
 }
 
 .star-4 {
-    margin-top: 2.6%; 
-    margin-left: 44%;
-    animation-name: twinkle-1;
-    animation-duration: 5s;
+    margin-top: 2.3%; 
+    margin-left: 71%;
+    animation-name: twinkle-2;
+    animation-duration: 1.3s;
 }
 
 .star-5 {
     margin-top: 2.4%; 
-    margin-left: 71%;
-    animation-name: twinkle-1;
-    animation-duration: 5s;
+    margin-left: 24%;
+    animation-name: twinkle-3;
+    animation-duration: 3.1s;
 }
 
 .star-6 {
-    margin-top: 2.3%; 
-    margin-left: 17%;
+    margin-top: 4.4%; 
+    margin-left: 9%;
     animation-name: twinkle-1;
-    animation-duration: 5s;
+    animation-duration: 2.4s;
 }
 
-.star-2 {
-    margin-top: 2.6%;
-    margin-left: 55%;
+.star-7 {
+    margin-top: 3.2%; 
+    margin-left: 57%;
     animation-name: twinkle-2;
-    animation-duration: 3s;
+    animation-duration: 2.4s;
 }
 
-.star-3 {
-    margin-top: 1.3%;
-    margin-left: 34%;
+.star-8 {
+    margin-top: 3.7%; 
+    margin-left: 73%;
     animation-name: twinkle-3;
-    animation-duration: 9s;
+    animation-duration: 2.4s;
+}
+
+.star-9 {
+    margin-top: 1.7%; 
+    margin-left: 15%;
+    animation-name: twinkle-1;
+    animation-duration: 2.4s;
+}
+
+.star-10 {
+    margin-top: 2.3%; 
+    margin-left: 65%;
+    animation-name: twinkle-2;
+    animation-duration: 2.4s;
+}
+
+.star-11 {
+    margin-top: 2.7%; 
+    margin-left: 25%;
+    animation-name: twinkle-3;
+    animation-duration: 2.4s;
+}
+
+.star-12 {
+    margin-top: 3.1%; 
+    margin-left: 59%;
+    animation-name: twinkle-1;
+    animation-duration: 2.4s;
 }
 
 @keyframes twinkle-1 {
