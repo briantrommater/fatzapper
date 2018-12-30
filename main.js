@@ -261,7 +261,7 @@ document.querySelector("#gotit").innerHTML = exString5;
 
 let pugString1 = "Are You a Pug Looking to Shed Pounds?";
 document.querySelector("#nineth").innerHTML = pugString1;
-let pugString2 = "Enter 32 Inches into Height Calulation for Pugs!";
+let pugString2 = "Enter 29 Inches into Height Calulation for Pugs!";
 document.querySelector("#tenth").innerHTML = pugString2;
 let pugString3 = "WOOF!";
 document.querySelector("#woof").innerHTML = pugString3;
