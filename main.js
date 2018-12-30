@@ -24,8 +24,8 @@ michaelScott = getsavedScott,
 start = document.getElementById('start'),
 p100 = document.getElementById('p100'),
 p50 = document.getElementById('p50'),
-m100 = document.getElementById('m100'),
-m50 = document.getElementById('m50'),
+p25 = document.getElementById('p25'),
+m25 = document.getElementById('m25'),
 cals = document.getElementById('cals'),
 weight = document.getElementById('weight'),
 height = document.getElementById('tall'),
@@ -152,15 +152,15 @@ p50.addEventListener('click', () => {
     show();
 });
 
-m100.addEventListener('click', () => {
-    localStorage.setItem("score", score -= 100)
+p25.addEventListener('click', () => {
+    localStorage.setItem("score", score += 25)
     renderScore();
     renderWeightLoss(); 
     show();
 });
 
-m50.addEventListener('click', () => {  
-    localStorage.setItem("score", score-= 50)
+m25.addEventListener('click', () => {  
+    localStorage.setItem("score", score-= 25)
     renderScore(); 
     renderWeightLoss(); 
     show();
