@@ -101,16 +101,22 @@ okAlready.addEventListener('click', () => {
     let theseDisappear = document.getElementsByClassName("instruct4");
         for (let thing of theseDisappear) {
             thing.style.display = "none";
-        }
+        }  
     let theseAppear = document.getElementsByClassName("scoreboard");
         for (let thing of theseAppear) {
             thing.style.display = "block";
             document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)";
         }  
-        document.querySelector("#bark").play();
+        document.querySelector("#drip").play();
+        setTimeout(function () {
+        document.querySelector("#drop").play();
+        }, 2500);
+        setTimeout(function () {
+        document.querySelector("#plop").play();
+        }, 4500);
 });
 
-//initialize the miff alg with the users inputs
+//initialize the miff algorithm with the users inputs
 document.querySelector("#miff").addEventListener("submit", (e) => {
     e.preventDefault();
     let heightp = e.target.elements.height.value;
