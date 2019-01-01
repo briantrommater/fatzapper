@@ -110,7 +110,7 @@ okAlready.addEventListener('click', () => {
         document.querySelector("#drip").play();
         setTimeout(function () {
         document.querySelector("#drop").play();
-        }, 2500);
+        }, 4500);
         setTimeout(function () {
         document.querySelector("#plop").play();
         }, 4500);
