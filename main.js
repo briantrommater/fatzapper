@@ -107,13 +107,7 @@ okAlready.addEventListener('click', () => {
             thing.style.display = "block";
             document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)";
         }  
-        document.querySelector("#drip").play();
-        setTimeout(function () {
-        document.querySelector("#drop").play();
-        }, 4500);
-        setTimeout(function () {
-        document.querySelector("#plop").play();
-        }, 4500);
+        document.querySelector("#drips").play();
 });
 
 //initialize the miff algorithm with the users inputs
