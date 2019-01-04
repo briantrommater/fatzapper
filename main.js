@@ -178,15 +178,19 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, #7fff00, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= -1000 && cals.textContent < -800) {
+        document.querySelector("#drips").play();
         document.body.style.background = "linear-gradient(to right, #76D7EA, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= -800 && cals.textContent < -600) {
+        document.querySelector("#drips").play();
         document.body.style.background = "linear-gradient(to right, #DA2C43, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= -600 && cals.textContent < -400) {
+        document.querySelector("#drips").play();
         document.body.style.background = "linear-gradient(to right, #FFF700, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= -400 && cals.textContent < -200) {
+        document.querySelector("#drips").play();
         document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= -200 && cals.textContent < 0) {
