@@ -174,11 +174,23 @@ reset.addEventListener('click', () => {
 //some background manipulation events and sounds
 let show = () => {
     
-    if (cals.textContent < -300) {
-        document.body.style.background = "linear-gradient(to right, Chartreuse, rgba(0, 0, 0, 0), Chartreuse)"
+    if (cals.textContent < -1000) {
+        document.body.style.background = "linear-gradient(to right, #7fff00, rgba(0, 0, 0, 0)"
     }
-    else if (cals.textContent >= -300 && cals.textContent < 0) {
-        document.body.style.background = "linear-gradient(to right, DeepSkyBlue, rgba(0, 0, 0, 0), DeepSkyBlue)"
+    else if (cals.textContent >= -1000 && cals.textContent < -800) {
+        document.body.style.background = "linear-gradient(to right, #76D7EA, rgba(0, 0, 0, 0)"
+    }
+    else if (cals.textContent >= -800 && cals.textContent < -600) {
+        document.body.style.background = "linear-gradient(to right, #DA2C43, rgba(0, 0, 0, 0)"
+    }
+    else if (cals.textContent >= -600 && cals.textContent < -400) {
+        document.body.style.background = "linear-gradient(to right, #FFF700, rgba(0, 0, 0, 0)"
+    }
+    else if (cals.textContent >= -400 && cals.textContent < -200) {
+        document.body.style.background = "linear-gradient(to right, #66FF66, rgba(0, 0, 0, 0)"
+    }
+    else if (cals.textContent >= -200 && cals.textContent < 0) {
+        document.body.style.background = "linear-gradient(to right, #00bfff, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= 50 && cals.textContent < 400) {
         document.querySelector("#yum").play();
