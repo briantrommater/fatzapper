@@ -1,9 +1,3 @@
-This Fitness App accurately calculates BMR with only two values of input.
+This app is a simplification of my main fatzapper app since I need to break it down into smaller pieces in order to ultimately improve it.
 
-BMR is the amount of calories/energy your body would consume if 
-you were to do ZERO exercise and just go about your normal day.
-
-You can then add in the cost of exercise to determine exactly 
-how much weight you gained or lost on a particular day.
-
-https://briantrommater.github.io/fatzapper/
+https://briantrommater.github.io/fatzap_lite/

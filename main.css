@@ -6,59 +6,6 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(180, 100%, 50%));
 }
 
-.instruct1 {
-    display: none;
-    font-size: 1.75em;
-    text-align: center;
-    padding: 0.3em;
-    color: blue;
-}
-
-.instruct2 {
-    display: none;
-    font-size: 1.6em;
-    text-align: center;
-    padding: 0.3em;
-    color: blue;
-}
-
-.instruct21 {
-    display: none;
-    font-size: 1.6em;
-    text-align: center;
-    padding: 0.3em;
-}
-
-.instruct3 {
-    display: none;
-    font-size: 1.6em;
-    text-align: center;
-    padding: 0.3em;
-}
-
-.instruct4 {
-    display: none;
-    font-size: 1.6em;
-    text-align: center;
-    padding: 0.3em;
-}
-
-.i4 {
-    border: 3px solid #FF355E;
-    margin: 0.5em;
-    padding: 0.2em;
-    box-shadow: 0 0 30px #FD5B78;
-    border-radius: 11px;
-}
-
-.info {
-    border: 3px solid royalblue;
-    margin: 0.5em;
-    padding: 0.2em;
-    box-shadow: 0 0 30px darkblue;
-    border-radius: 11px;
-}
-
 .sbutton {
     border: 5px solid dodgerblue;
     font-size: 1.33em;
@@ -71,15 +18,40 @@ body {
 .scoreboard {
     width: 79%;
     margin: 0 auto;
-    display: none;
+    /* display: none; */
+}
+
+.waitloss {
+    margin-top: 0.8em;
+    padding-top: 0.7em;
+    padding-left: 0.85em;
+    color: blue;
+    width: 60;
+    border: 3px outset springgreen;
+    box-shadow: 0 0 30px darkgreen;
+    border-radius: 11px;
+    height: 3em;
 }
 
 .top {
-    font-size: 1.4em;
+    font-size: 1.64em;
     margin-top: 0.8em;
+    padding-top: 0.05em;
     width: 80;
+    color: blue;
     border: 3px outset dodgerblue;
     box-shadow: 0 0 30px darkblue;
+    border-radius: 11px;
+    height: 2em;
+}
+
+.mid {
+    font-size: 1.38em;
+    margin-top: 0.8em;
+    width: 80;
+    color: blue;
+    border: 3px outset springgreen;
+    box-shadow: 0 0 30px darkgreen;
     border-radius: 11px;
     height: 2em;
 }
