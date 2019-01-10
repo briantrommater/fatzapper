@@ -25,7 +25,7 @@ body {
     margin-top: 0.8em;
     padding-top: 0.7em;
     padding-left: 0.85em;
-    color: blue;
+    color: green;
     width: 60;
     border: 3px outset springgreen;
     box-shadow: 0 0 30px darkgreen;
@@ -34,7 +34,7 @@ body {
 }
 
 .top {
-    font-size: 1.64em;
+    font-size: 1.4em;
     margin-top: 0.8em;
     padding-top: 0.05em;
     width: 80;
