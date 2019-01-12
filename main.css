@@ -127,7 +127,6 @@ body {
 }
 
 .stars {
-    background-color: white;
     height: 5px;
     width: 5px;
     position: absolute;
@@ -136,6 +135,7 @@ body {
 }
 
 .star-1 {
+    background-color: red;
     margin-top: 1.6%; 
     margin-left: 13%;
     animation-name: twinkle-2;
@@ -143,80 +143,91 @@ body {
 }
 
 .star-2 {
+    background-color: lightseagreen;
     margin-top: 3.6%;
     margin-left: 38%;
     animation-name: twinkle-3;
-    animation-duration: 5.1s;
+    animation-duration: 3s;
 }
 
 .star-3 {
+    background-color: white;
     margin-top: 2.9%;
     margin-left: 52%;
     animation-name: twinkle-1;
-    animation-duration: 4.4s;
+    animation-duration: 4s;
 }
 
 .star-4 {
+    background-color: lightskyblue;
     margin-top: 2.3%; 
     margin-left: 71%;
     animation-name: twinkle-2;
-    animation-duration: 1.3s;
+    animation-duration: 2.5s;
 }
 
 .star-5 {
+    background-color: white;
     margin-top: 2.4%; 
     margin-left: 24%;
     animation-name: twinkle-3;
-    animation-duration: 3.1s;
+    animation-duration: 3.5s;
 }
 
 .star-6 {
+    background-color: lightyellow;
     margin-top: 4.4%; 
     margin-left: 9%;
     animation-name: twinkle-1;
-    animation-duration: 2.4s;
+    animation-duration: 4.5s;
 }
 
 .star-7 {
+    background-color: white;
     margin-top: 3.2%; 
     margin-left: 57%;
     animation-name: twinkle-2;
-    animation-duration: 2.4s;
+    animation-duration: 3.5s;
 }
 
 .star-8 {
+    background-color: lightgreen;
     margin-top: 3.7%; 
     margin-left: 73%;
     animation-name: twinkle-3;
-    animation-duration: 2.4s;
+    animation-duration: 1.2s;
 }
 
 .star-9 {
+    background-color: white;
     margin-top: 1.7%; 
     margin-left: 15%;
     animation-name: twinkle-1;
-    animation-duration: 2.4s;
+    animation-duration: 2.3s;
 }
 
 .star-10 {
+    background-color: lightpink;
     margin-top: 2.3%; 
     margin-left: 65%;
     animation-name: twinkle-2;
-    animation-duration: 2.4s;
+    animation-duration: 3.3s;
 }
 
 .star-11 {
+    background-color: white;
     margin-top: 2.7%; 
     margin-left: 25%;
     animation-name: twinkle-3;
-    animation-duration: 2.4s;
+    animation-duration: 4.2s;
 }
 
 .star-12 {
+    background-color: lightblue;
     margin-top: 3.1%; 
     margin-left: 59%;
     animation-name: twinkle-1;
-    animation-duration: 2.4s;
+    animation-duration: 1.8s;
 }
 
 @keyframes twinkle-1 {
