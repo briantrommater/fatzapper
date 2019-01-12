@@ -135,11 +135,11 @@ body {
 }
 
 .star-1 {
-    background-color: red;
+    background-color: pink;
     margin-top: 1.6%; 
     margin-left: 13%;
     animation-name: twinkle-2;
-    animation-duration: 2s;
+    animation-duration: 2.6s;
 }
 
 .star-2 {
@@ -195,7 +195,7 @@ body {
     margin-top: 3.7%; 
     margin-left: 73%;
     animation-name: twinkle-3;
-    animation-duration: 1.2s;
+    animation-duration: 3.7s;
 }
 
 .star-9 {
@@ -227,7 +227,7 @@ body {
     margin-top: 3.1%; 
     margin-left: 59%;
     animation-name: twinkle-1;
-    animation-duration: 1.8s;
+    animation-duration: 2.8s;
 }
 
 @keyframes twinkle-1 {
