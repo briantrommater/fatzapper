@@ -135,7 +135,7 @@ body {
 }
 
 .star-1 {
-    background-color: pink;
+    background-color: white;
     margin-top: 1.6%; 
     margin-left: 13%;
     animation-name: twinkle-2;
@@ -143,7 +143,7 @@ body {
 }
 
 .star-2 {
-    background-color: lightseagreen;
+    background-color: azure;
     margin-top: 3.6%;
     margin-left: 38%;
     animation-name: twinkle-3;
@@ -151,7 +151,7 @@ body {
 }
 
 .star-3 {
-    background-color: white;
+    background-color: ghostwhite;
     margin-top: 2.9%;
     margin-left: 52%;
     animation-name: twinkle-1;
@@ -159,7 +159,7 @@ body {
 }
 
 .star-4 {
-    background-color: lightskyblue;
+    background-color: aliceblue;
     margin-top: 2.3%; 
     margin-left: 71%;
     animation-name: twinkle-2;
@@ -167,7 +167,7 @@ body {
 }
 
 .star-5 {
-    background-color: white;
+    background-color: lavenderblush;
     margin-top: 2.4%; 
     margin-left: 24%;
     animation-name: twinkle-3;
@@ -175,7 +175,7 @@ body {
 }
 
 .star-6 {
-    background-color: lightyellow;
+    background-color: ivory;
     margin-top: 4.4%; 
     margin-left: 9%;
     animation-name: twinkle-1;
@@ -183,7 +183,7 @@ body {
 }
 
 .star-7 {
-    background-color: white;
+    background-color: mintcream;
     margin-top: 3.2%; 
     margin-left: 57%;
     animation-name: twinkle-2;
@@ -191,7 +191,7 @@ body {
 }
 
 .star-8 {
-    background-color: lightgreen;
+    background-color: oldlace;
     margin-top: 3.7%; 
     margin-left: 73%;
     animation-name: twinkle-3;
@@ -199,7 +199,7 @@ body {
 }
 
 .star-9 {
-    background-color: white;
+    background-color: seashell;
     margin-top: 1.7%; 
     margin-left: 15%;
     animation-name: twinkle-1;
@@ -207,7 +207,7 @@ body {
 }
 
 .star-10 {
-    background-color: lightpink;
+    background-color: floralwhite;
     margin-top: 2.3%; 
     margin-left: 65%;
     animation-name: twinkle-2;
@@ -215,7 +215,7 @@ body {
 }
 
 .star-11 {
-    background-color: white;
+    background-color: snow;
     margin-top: 2.7%; 
     margin-left: 25%;
     animation-name: twinkle-3;
@@ -223,7 +223,7 @@ body {
 }
 
 .star-12 {
-    background-color: lightblue;
+    background-color: whitesmoke;
     margin-top: 3.1%; 
     margin-left: 59%;
     animation-name: twinkle-1;
