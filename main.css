@@ -56,6 +56,14 @@ body {
     height: 2em;
 }
 
+#fire {
+    /* position: fixed; */
+    height: 1.4em;
+    width: 1.4em;
+    float: right;
+    margin-left: 70%;
+}
+
 #lbs {
     margin-top: 0.31em;
     margin-left: 0.9em;
