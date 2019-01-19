@@ -1,3 +1,3 @@
-This app is a simplification of what it was a few commits ago since I need to break it down into smaller pieces in order to ultimately improve it.
+This app is a work in progress.  It was sooo complicated a month ago, but I want to make it easier for the user.  For now, I am using a calculation that will work for all males to attain weight loss.  I lost 24 lbs in 30 days using this app to meticulously track every calorie consumed and burned.  I'm gonna use this app till march madness and then finally have some beer and pizza.  Wish me luck in my quest to get super fit.  Oh yeah, the app is conservative, meaning if it says you lost 6 ounces one day you prolly lost at least 7-8.  I have like 20 more features i'm gonna be adding/readding back including trying to have an ounce of design and style. That'll be a huge upgrade.  Stay tuned below.
 
 https://briantrommater.github.io/fatzapper/
