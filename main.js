@@ -25,7 +25,7 @@ renderScore();
 
 //ounces
 let renderWeightLoss = () => {
-    scale = (2222 - score)/ 218.75;
+    scale = (2700 - score)/ 218.75;
     weight.textContent = scale.toFixed(1);
    
 }
