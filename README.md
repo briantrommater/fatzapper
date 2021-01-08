@@ -1,3 +1,1 @@
-This app is a work in progress.  It was sooo ambitious and complicated a month ago, but I want to make it easier for the user for now.  I am using a fat loss calculation that will work accurately for nearly all males.  I've lost 27lbs in 48 days using this app to track every calorie consumed and burned.  This is the most weight I've ever lost in my life so I'd say this app is a success.  I'm gonna add features to it, but am kinda working on getting a job and breaking into the tech industry these days.  I'll keep up the weight loss though and update total loss after 90 days.  Try it below..
-
 https://briantrommater.github.io/fatzapper/
