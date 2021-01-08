@@ -67,8 +67,8 @@ reset.addEventListener('click', () => {
 });
 
 //some background manipulation events and sounds
-let show = () => {
-    
+/* let show = () => {
+Have     
     if (cals.textContent < -1000) {
         document.body.style.background = "linear-gradient(to right, #7fff00, rgba(0, 0, 0, 0)"
     }
@@ -146,4 +146,4 @@ let show = () => {
         document.querySelector("#fl").play();
         document.body.style.background = "linear-gradient(to right, #1B1B1B, rgba(0, 0, 0, 0))"                       
     }
-}
+} */
