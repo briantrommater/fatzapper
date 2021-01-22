@@ -88,10 +88,10 @@ let show = () => {
         document.body.style.background = "linear-gradient(to right, #00bfff, rgba(0, 0, 0, 0)"
     }
     else if (cals.textContent >= 50 && cals.textContent < 400) {
-        //document.body.style.background = "linear-gradient(to right, rgb(111, 159, 216), rgba(0, 0, 0, 0), rgb(111, 159, 216))"
-        Math.floor(Math.random()*16777215).toString(16);
-        document.body.style.backgroundColor = "#" + randomColor;
-        color.innerHTML = "#" + randomColor;
+        document.body.style.background = "linear-gradient(to right, rgb(111, 159, 216), rgba(0, 0, 0, 0), rgb(111, 159, 216))"
+        //Math.floor(Math.random()*16777215).toString(16);
+        //document.body.style.backgroundColor = "#" + randomColor;
+        //color.innerHTML = "#" + randomColor;
     }
     else if (cals.textContent >= 400 && cals.textContent < 700) {
         document.body.style.background = "linear-gradient(to right, rgb(220, 76, 70), rgba(0, 0, 0, 0), rgb(220, 76, 70))"
