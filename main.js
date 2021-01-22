@@ -48,14 +48,14 @@ p50.addEventListener('click', () => {
 });
 
 p25.addEventListener('click', () => {
-    localStorage.setItem("score", score += 5)
+    localStorage.setItem("score", score += 25)
     renderScore();
     renderWeightLoss(); 
     show();
 });
 
 m25.addEventListener('click', () => {  
-    localStorage.setItem("score", score-= 25)
+    localStorage.setItem("score", score-= 10)
     renderScore(); 
     renderWeightLoss(); 
     show();
