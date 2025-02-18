@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fatzapper - Calorie Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .scoreboard {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #p100 { background: #ff4757; }
+        #p50 { background: #ffa502; }
+        #p25 { background: #2ed573; }
+        #m25 { background: #3742fa; }
+        .reset-btn {
+            background: #d63031;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,6 +69,20 @@
         </div>
         <button id="reset" class="reset-btn">Reset</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        let score = localStorage.getItem("score") ? parseInt(localStorage.getItem("score")) : 0;
+        const cals = document.getElementById("cals");
+        const weight = document.getElementById("weight");
+        const updateUI = () => {
+            cals.textContent = score;
+            weight.textContent = ((2700 - score) / 218.75).toFixed(1);
+        };
+        document.getElementById("p100").addEventListener("click", () => { score += 100; localStorage.setItem("score", score); updateUI(); });
+        document.getElementById("p50").addEventListener("click", () => { score += 50; localStorage.setItem("score", score); updateUI(); });
+        document.getElementById("p25").addEventListener("click", () => { score += 25; localStorage.setItem("score", score); updateUI(); });
+        document.getElementById("m25").addEventListener("click", () => { score -= 10; localStorage.setItem("score", score); updateUI(); });
+        document.getElementById("reset").addEventListener("click", () => { localStorage.clear(); score = 0; updateUI(); });
+        updateUI();
+    </script>
 </body>
 </html>
