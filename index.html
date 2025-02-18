@@ -1,43 +1,27 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>fatzapper</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatzapper - Calorie Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <div class="scoreboard">
-        <!-- <img id="fire" src="fire.gif"><br /> -->
-        <div class="waitloss"><div id="wloss">App keeps track of count until click reset?</div></div>
-        <div class="top"><div id="energy">Calories/Energy: <span id="cals">0</span></div></div>
-        <div class="star-9 stars"></div>
-        <div class="star-10 stars"></div>
-        <div class="mid"><div id="lbs">Ounces of Fat Lost: <span id="weight">0</span></div></div>
-        <div class="star-11 stars"></div>
-        <div class="star-12 stars"></div>
-        <div class="button" id="p100"><div class="innerbutton" id="t100">+100 cals</div></div>
-        <div class="star-1 stars"></div>
-        <div class="star-2 stars"></div>
-        <div class="button" id="p50"><div class="innerbutton" id="t50">+50 cals</div></div> 
-        <div class="star-3 stars"></div>
-        <div class="star-4 stars"></div>
-        <div class="button" id="p25"><div class="innerbutton" id="t100">+25 cals</div></div>
-        <div class="star-5 stars"></div>
-        <div class="star-6 stars"></div>
-        <div class="button" id="m25"><div class="innerbutton" id="t50">-10 cals</div></div>
-        <div class="star-7 stars"></div>
-        <div class="star-8 stars"></div>
-        <div id="reset"><div id="innerreset">reset</div></div>
-    </div><br>
-  
-
-    <script src="main.js"></script>
+    <div class="container">
+        <h1>Fatzapper - Calorie Tracker</h1>
+        <p>Track your calorie intake and see your progress!</p>
+        <div class="scoreboard">
+            <p>Calories: <span id="cals">0</span></p>
+            <p>Fat Burned: <span id="weight">0</span> oz</p>
+        </div>
+        <div class="buttons">
+            <button id="p100">+100 cals</button>
+            <button id="p50">+50 cals</button>
+            <button id="p25">+25 cals</button>
+            <button id="m25">-10 cals</button>
+        </div>
+        <button id="reset" class="reset-btn">Reset</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
