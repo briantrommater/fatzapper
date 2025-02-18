@@ -28,20 +28,17 @@
             font-size: 1.5em;
             margin-bottom: 20px;
         }
-        .buttons button {
+        .buttons input {
             display: block;
-            width: 100%;
-            margin: 10px 0;
+            width: calc(100% - 20px);
+            margin: 10px auto;
             padding: 10px;
             font-size: 1.2em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-align: center;
         }
-        #p100 { background: #ff4757; }
-        #p50 { background: #ffa502; }
-        #p25 { background: #2ed573; }
-        #m25 { background: #3742fa; }
         .reset-btn {
             background: #d63031;
             padding: 10px;
@@ -62,10 +59,9 @@
             <p>Fat Burned: <span id="weight">0</span> oz</p>
         </div>
         <div class="buttons">
-            <button id="p100">+100 cals</button>
-            <button id="p50">+50 cals</button>
-            <button id="p25">+25 cals</button>
-            <button id="m25">-10 cals</button>
+            <input type="number" id="calInput" placeholder="Enter calories" />
+            <button id="addCalories">Add Calories</button>
+            <button id="subtractCalories">Subtract Calories</button>
         </div>
         <button id="reset" class="reset-btn">Reset</button>
     </div>
@@ -73,15 +69,33 @@
         let score = localStorage.getItem("score") ? parseInt(localStorage.getItem("score")) : 0;
         const cals = document.getElementById("cals");
         const weight = document.getElementById("weight");
+        const calInput = document.getElementById("calInput");
+        
         const updateUI = () => {
             cals.textContent = score;
             weight.textContent = ((2700 - score) / 218.75).toFixed(1);
         };
-        document.getElementById("p100").addEventListener("click", () => { score += 100; localStorage.setItem("score", score); updateUI(); });
-        document.getElementById("p50").addEventListener("click", () => { score += 50; localStorage.setItem("score", score); updateUI(); });
-        document.getElementById("p25").addEventListener("click", () => { score += 25; localStorage.setItem("score", score); updateUI(); });
-        document.getElementById("m25").addEventListener("click", () => { score -= 10; localStorage.setItem("score", score); updateUI(); });
-        document.getElementById("reset").addEventListener("click", () => { localStorage.clear(); score = 0; updateUI(); });
+        
+        document.getElementById("addCalories").addEventListener("click", () => {
+            let val = parseInt(calInput.value) || 0;
+            score += val;
+            localStorage.setItem("score", score);
+            updateUI();
+        });
+        
+        document.getElementById("subtractCalories").addEventListener("click", () => {
+            let val = parseInt(calInput.value) || 0;
+            score -= val;
+            localStorage.setItem("score", score);
+            updateUI();
+        });
+        
+        document.getElementById("reset").addEventListener("click", () => {
+            localStorage.clear();
+            score = 0;
+            updateUI();
+        });
+        
         updateUI();
     </script>
 </body>
