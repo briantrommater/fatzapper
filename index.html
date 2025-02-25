@@ -28,16 +28,19 @@
             font-size: 1.5em;
             margin-bottom: 20px;
         }
-        .buttons input {
-            display: block;
-            width: calc(100% - 20px);
-            margin: 10px auto;
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .buttons button {
             padding: 10px;
             font-size: 1.2em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-align: center;
+            width: 80px;
         }
         .reset-btn {
             background: #d63031;
@@ -47,55 +50,98 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 15px;
+        }
+        .banked {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Fatzapper - Calorie Tracker</h1>
-        <p>Track your calorie intake and see your progress!</p>
+        <p>Track your calorie intake and bank your progress!</p>
+        
         <div class="scoreboard">
             <p>Calories: <span id="cals">0</span></p>
             <p>Fat Burned: <span id="weight">0</span> oz</p>
         </div>
+
         <div class="buttons">
-            <input type="number" id="calInput" placeholder="Enter calories" />
-            <button id="addCalories">Add Calories</button>
-            <button id="subtractCalories">Subtract Calories</button>
+            <button onclick="addCalories(50)">+50</button>
+            <button onclick="addCalories(100)">+100</button>
+            <button onclick="addCalories(200)">+200</button>
+            <button onclick="subtractCalories(50)">-50</button>
+            <button onclick="subtractCalories(100)">-100</button>
+            <button onclick="subtractCalories(200)">-200</button>
         </div>
+
+        <div class="banked">
+            <h2>Banked Calories</h2>
+            <p><span id="banked">0</span> banked</p>
+            <button onclick="bankCalories()">Bank</button>
+            <button onclick="spendBanked()">Use</button>
+        </div>
+
         <button id="reset" class="reset-btn">Reset</button>
     </div>
+
     <script>
         let score = localStorage.getItem("score") ? parseInt(localStorage.getItem("score")) : 0;
+        let bankedCalories = localStorage.getItem("bankedCalories") ? parseInt(localStorage.getItem("bankedCalories")) : 0;
+        
         const cals = document.getElementById("cals");
         const weight = document.getElementById("weight");
-        const calInput = document.getElementById("calInput");
-        
+        const banked = document.getElementById("banked");
+
         const updateUI = () => {
             cals.textContent = score;
             weight.textContent = ((2700 - score) / 218.75).toFixed(1);
+            banked.textContent = bankedCalories;
         };
-        
-        document.getElementById("addCalories").addEventListener("click", () => {
-            let val = parseInt(calInput.value) || 0;
-            score += val;
+
+        const addCalories = (amount) => {
+            score += amount;
             localStorage.setItem("score", score);
             updateUI();
-        });
-        
-        document.getElementById("subtractCalories").addEventListener("click", () => {
-            let val = parseInt(calInput.value) || 0;
-            score -= val;
+        };
+
+        const subtractCalories = (amount) => {
+            score -= amount;
             localStorage.setItem("score", score);
             updateUI();
-        });
-        
+        };
+
+        const bankCalories = () => {
+            if (score > 0) {
+                bankedCalories += score;
+                score = 0;
+                localStorage.setItem("score", score);
+                localStorage.setItem("bankedCalories", bankedCalories);
+                updateUI();
+            }
+        };
+
+        const spendBanked = () => {
+            if (bankedCalories > 0) {
+                score += bankedCalories;
+                bankedCalories = 0;
+                localStorage.setItem("score", score);
+                localStorage.setItem("bankedCalories", bankedCalories);
+                updateUI();
+            }
+        };
+
         document.getElementById("reset").addEventListener("click", () => {
             localStorage.clear();
             score = 0;
+            bankedCalories = 0;
             updateUI();
         });
-        
+
         updateUI();
     </script>
 </body>
